@@ -24,6 +24,14 @@ class ProductController extends Controller
             'stok' => 3,
             'kategori' => 'Hiking'
         ],
+        [
+            'id' => 3,
+            'nama_produk' => 'Tenda Dome 4 Orang',
+            'deskripsi' => 'Tenda khusus 4 orang',
+            'harga' => 150000,
+            'stok' => 3,
+            'kategori' => 'Camping'
+        ],
     ];
 
     // 🔹 Ambil semua produk (dari session jika ada)

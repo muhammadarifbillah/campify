@@ -7,7 +7,7 @@
 
 <form action="{{ route('products.update', $product['id']) }}" method="POST">
     @csrf
-    @method('PUT') 
+    @method('POST') 
     
     <div class="mb-3">
         <label>Nama Produk</label>
