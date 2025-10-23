@@ -18,6 +18,7 @@ Route::post('/products/store', [ProductController::class, 'store'])->name('produ
 Route::get('/products/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');
 Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
 Route::get('/products/delete/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
 Route::get('/stok', [StokController::class, 'index'])->name('stok.index');
 Route::post('/stok', [StokController::class, 'store'])->name('stok.store');
 Route::get('/stok/edit/{id}', [StokController::class, 'edit'])->name('stok.edit');
