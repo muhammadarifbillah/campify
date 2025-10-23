@@ -25,3 +25,7 @@ Route::get('/stok/edit/{id}', [StokController::class, 'edit'])->name('stok.edit'
 Route::post('/stok/update/{id}', [StokController::class, 'update'])->name('stok.update');
 Route::get('/stok/delete/{id}', [StokController::class, 'delete'])->name('stok.delete');
 
+Route::get('/stok/reset', function () {
+    session()->forget('stok');
+    return redirect('/stok')->with('success', 'Data stok berhasil direset!');
+});

@@ -13,6 +13,9 @@
                 @csrf
                 <div class="row g-2 align-items-center">
                     <div class="col">
+                        <input type="text" name="nama" class="form-control" placeholder="Nama Produk" required>
+                    </div>
+                    <div class="col">
                         <input type="number" name="harga" class="form-control" placeholder="Harga" required>
                     </div>
                     <div class="col">
@@ -30,6 +33,9 @@
             <form action="{{ route('stok.update', $editProduk['id']) }}" method="POST" class="mb-4">
                 @csrf
                 <div class="row g-2 align-items-center">
+                    <div class="col">
+                        <input type="text" name="nama" value="{{ $editProduk['nama'] }}" class="form-control" required>
+                    </div>
                     <div class="col">
                         <input type="number" name="harga" value="{{ $editProduk['harga'] }}" class="form-control" required>
                     </div>
@@ -49,6 +55,7 @@
             <thead class="table-success">
                 <tr>
                     <th>ID</th>
+                    <th>Nama Produk</th>
                     <th>Harga</th>
                     <th>Stok</th>
                     <th style="width: 150px;">Aksi</th>
@@ -58,6 +65,7 @@
                 @foreach($stok as $item)
                     <tr>
                         <td>{{ $item['id'] }}</td>
+                        <td>{{ $item['nama'] }}</td>
                         <td>Rp {{ number_format($item['harga'], 0, ',', '.') }}</td>
                         <td>{{ $item['stok'] }}</td>
                         <td>

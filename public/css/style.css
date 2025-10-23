@@ -1,0 +1,81 @@
+/* Style umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+/* Navbar hijau */
+.navbar {
+    background-color: #2e7d32; /* hijau */
+    padding: 12px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Tulisan kiri */
+.navbar .brand {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Form pencarian di tengah */
+.navbar form {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar input[type="text"] {
+    width: 40%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.navbar button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    background-color: white;
+    color: #2e7d32;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.navbar button:hover {
+    background-color: #e8f5e9;
+}
+
+/* Konten utama */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f3f3f3;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
