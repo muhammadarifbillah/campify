@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\penjualController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Stokcontroller;
 
 Route::get('/penjual/dashboard', [penjualController::class, 'dashboard'])->name('dashboardPenjual');
 
