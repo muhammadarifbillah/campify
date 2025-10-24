@@ -110,36 +110,6 @@
             <li>Pembeli <strong>Andi</strong> memberikan rating ⭐⭐⭐⭐⭐</li>
         </ul>
 
-        <hr class="my-4">
-
-        <!-- Form Profil di Dalam Dashboard -->
-        <h4>Profil Saya</h4>
-        <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Nama Lengkap</label>
-                <input type="text" name="name" value="{{ old('name', $user['name']) }}"
-                    class="form-control rounded-3 @error('name') is-invalid @enderror">
-                @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Bio</label>
-                <textarea name="bio" class="form-control rounded-3" rows="3">{{ old('bio', $user['bio']) }}</textarea>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label fw-semibold">Ganti Foto Profil</label>
-                <input type="file" name="photo" class="form-control rounded-3">
-                <small class="text-muted">Format: JPG/PNG, Max 2MB</small>
-            </div>
-
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-primary px-4 rounded-3 shadow-sm">
-                    <i class="bi bi-save me-2"></i> Simpan Perubahan
-                </button>
-            </div>
         </form>
 
     </div>

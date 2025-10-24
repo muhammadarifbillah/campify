@@ -24,6 +24,7 @@ class tesController extends Controller
         $request->validate([
             'name' => 'required|string|max:100',
             'bio' => 'nullable|string|max:500',
+            'email' => 'nullable|string|max:100',
             'photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
@@ -37,6 +38,7 @@ class tesController extends Controller
 
         $user['name'] = $request->name;
         $user['bio'] = $request->bio;
+        $user['email'] = $request->email;
 
         session(['user' => $user]);
 

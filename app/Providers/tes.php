@@ -65,6 +65,13 @@
                             </div>
 
                             <div class="mb-3">
+                                <label class="form-label fw-semibold">Email</label>
+                                <input type="email" name="email" value="{{ old('email', $user['email']) }}"
+                                    class="form-control rounded-3 @error('email') is-invalid @enderror">
+                                @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            </div>
+
+                            <div class="mb-3">
                                 <label class="form-label fw-semibold">Ganti Foto Profil</label>
                                 <input type="file" name="photo" class="form-control rounded-3">
                                 <small class="text-muted">Format: JPG/PNG, Max 2MB</small>
