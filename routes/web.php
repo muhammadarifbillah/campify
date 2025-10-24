@@ -22,6 +22,7 @@ Route::post('/register', [AuthController::class, 'register'])->name('register.pr
 
 Route::get('/penjual/dashboard', [penjualController::class, 'dashboard'])->name('dashboardPenjual');
 
+// Profil pengguna
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
