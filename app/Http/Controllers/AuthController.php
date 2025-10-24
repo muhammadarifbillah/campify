@@ -53,7 +53,6 @@ class AuthController extends Controller
             'password' => 'required|min:5'
         ]);
 
-        // karena hanya simulasi (tanpa database)
         return redirect()->route('login')->with('success', 'Registrasi berhasil! Silakan login.');
     }
 
