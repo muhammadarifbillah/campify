@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class tesController extends Controller
 {
     private $defaultUser = [
         'name' => 'Arif Billah',

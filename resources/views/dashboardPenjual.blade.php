@@ -47,7 +47,7 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <h4 class="text-center mb-4">TokoKu</h4>
+        <h4 class="text-center mb-4">Campify</h4>
         <a href="#">🏠 Dashboard</a>
         <a href="{{ route('products.index') }}">📦 Produk</a>
         <a href="{{ route('stok.index') }}">🛠️ Kelola Stok & Harga</a>
@@ -56,7 +56,7 @@
         <a href="#">💬 Ulasan</a>
         <a href="#">⚙️ Pengaturan Toko</a>
         <hr class="bg-light">
-        <a href="{{ route('profile') }}">👤 Profil Saya</a> <!-- Link Profil -->
+        <a href="{{ route('profile') }}">👤 Profil Saya</a>
         <hr class="bg-light">
         <a href="#" class="text-danger">🚪 Logout</a>
     </div>
