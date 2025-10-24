@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    // Default user data
     private $defaultUser = [
         'name' => 'Arif Billah',
         'email' => 'arif@gmail.com',
@@ -13,14 +14,17 @@ class ProfileController extends Controller
         'photo' => 'farrel.jpeg'
     ];
 
+    // metdhod untuk menyimpan data 
     public function index()
     {
         $user = session('user', $this->defaultUser);
         return view('profile', compact('user'));
     }
 
+    // method untuk mengupdate data
     public function update(Request $request)
     {
+        //request validasi
         $request->validate([
             'name' => 'required|string|max:100',
             'bio' => 'nullable|string|max:500',
@@ -30,6 +34,7 @@ class ProfileController extends Controller
 
         $user = session('user', $this->defaultUser);
 
+        
         if ($request->hasFile('photo')) {
             $filename = time() . '_' . $request->photo->getClientOriginalName();
             $request->photo->move(public_path('profile'), $filename);
