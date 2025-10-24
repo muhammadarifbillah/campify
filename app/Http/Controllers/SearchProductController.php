@@ -7,11 +7,9 @@ use Illuminate\Http\Request;
 class SearchProductController extends Controller
 {
     private $products = [
-        ['id' => 1, 'name' => 'Sepatu Gunung', 'price' => 350000],
-        ['id' => 2, 'name' => 'Tenda 2 Orang', 'price' => 750000],
-        ['id' => 3, 'name' => 'Carrier 60L', 'price' => 680000],
-        ['id' => 4, 'name' => 'Jaket Waterproof', 'price' => 450000],
-        ['id' => 5, 'name' => 'Sleeping Bag', 'price' => 250000],
+        ['id' => 1, 'name' => 'Tenda Dome 2 Orang', 'price' => 250000],
+        ['id' => 2, 'name' => 'Tenda Dome 4 Orang', 'price' => 150000],
+        ['id' => 3, 'name' => 'Carrier 60L', 'price' => 400000],
     ];
 
     public function index(Request $request)

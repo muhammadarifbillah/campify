@@ -6,6 +6,7 @@ use App\Http\Controllers\penjualController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Stokcontroller;
+use App\Http\Controllers\SearchProductController;
 
 Route::get('/penjual/dashboard', [penjualController::class, 'dashboard'])->name('dashboardPenjual');
 
@@ -24,6 +25,7 @@ Route::post('/stok', [StokController::class, 'store'])->name('stok.store');
 Route::get('/stok/edit/{id}', [StokController::class, 'edit'])->name('stok.edit');
 Route::post('/stok/update/{id}', [StokController::class, 'update'])->name('stok.update');
 Route::get('/stok/delete/{id}', [StokController::class, 'delete'])->name('stok.delete');
+Route::get('/search-products', [SearchProductController::class, 'index'])->name('products');
 
 Route::get('/stok/reset', function () {
     session()->forget('stok');
