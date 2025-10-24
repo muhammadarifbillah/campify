@@ -33,7 +33,6 @@ class ProfileController extends Controller
         ]);
 
         $user = session('user', $this->defaultUser);
-
         
         if ($request->hasFile('photo')) {
             $filename = time() . '_' . $request->photo->getClientOriginalName();
