@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="text-center mb-4">
-                            <img src="{{ asset('' . ($user['photo'] ?? 'bahlil.jpeg')) }}"
+                            <img src="{{ asset('' . ($user['photo'] ?? 'farrel.jpeg')) }}"
                                 class="rounded-circle border shadow-sm mb-3" alt="Foto Profil" width="120" height="120">
                             <h5 class="mb-0">{{ $user['name'] }}</h5>
                             <small class="text-muted">{{ $user['email'] }}</small>

@@ -10,7 +10,7 @@ class ProfileController extends Controller
         'name' => 'Arif Rahman',
         'email' => 'arif@example.com',
         'bio' => 'Dosen IT dan pengembang EduVista',
-        'photo' => 'bahlil.jpeg'
+        'photo' => 'farrel.jpeg'
     ];
 
     public function index()
