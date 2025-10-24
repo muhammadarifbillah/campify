@@ -13,19 +13,21 @@ class SearchProductController extends Controller
     ];
 
     public function index(Request $request)
-    {
-        $keyword = strtolower((string) $request->get('search', ''));
+   {
+    $keyword = strtolower ((string) $request->get('search', ''));
 
-        $filtered = array_values(array_filter($this->products, function($product) use ($keyword) {
-            if ($keyword === '') {
-                return true;
-            }
-            return str_contains(strtolower($product['name']), $keyword);
-        }));
+    $filtered = array_values(array_filter($this->products, function($products) use ($keyword) {
+        if ($keyword === '') {
+            return true;
+        }
 
-        return view('products', [
-            'products' => $filtered,
-            'keyword' => $keyword,
-        ]);
-    }
+    return str_contains(strtolower(string: $products['name']), $keyword);
+    }));
+
+    return view('products', [
+        'products' => $filtered,
+        'keyword' => $keyword,
+    ]);
+    
+   }
 }
