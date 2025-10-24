@@ -30,8 +30,15 @@ class AuthController extends Controller
 
         foreach ($this->users as $user) {
             if ($user['username'] === $request->username && $user['password'] === $request->password) {
-                session(['username' => $user['username']]);
-                // arahkan ke halaman produk (search)
+               session([
+    'username' => $user['username'],
+    'user' => [
+        'name' => ucfirst($user['username']),
+        'email' => $user['username'] . '@campify.com',
+        'bio' => 'Belum ada bio.',
+        'photo' => 'default.png'
+    ]
+]);
                 return redirect()->route('dashboardPenjual');
             }
         }
