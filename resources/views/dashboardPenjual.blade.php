@@ -49,8 +49,8 @@
     <div class="sidebar">
         <h4 class="text-center mb-4">TokoKu</h4>
         <a href="#">🏠 Dashboard</a>
-        <a href="#">📦 Produk</a>
-        <a href="#">🛠️ Kelola Stok & Harga</a>
+        <a href="{{ route('products.index') }}">📦 Produk</a>
+        <a href="{{ route('stok.index') }}">🛠️ Kelola Stok & Harga</a>
         <a href="#">🛒 Pesanan</a>
         <a href="#">📊 Laporan Penjualan</a>
         <a href="#">💬 Ulasan</a>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    // Data default (dummy)
+    //Data dummy
     private $defaultProducts = [
         [
             'id' => 1,
@@ -24,22 +24,29 @@ class ProductController extends Controller
             'stok' => 3,
             'kategori' => 'Hiking'
         ],
+        [
+            'id' => 3,
+            'nama_produk' => 'Tenda Dome 4 Orang',
+            'deskripsi' => 'Tenda khusus 4 orang',
+            'harga' => 150000,
+            'stok' => 3,
+            'kategori' => 'Camping'
+        ],
     ];
 
-    // 🔹 Ambil semua produk (dari session jika ada)
-    public function index()
+    public function index() // untuk ambil semua produk (dari session jika ada)
     {
         $products = session('products', $this->defaultProducts);
         return view('products.index', compact('products'));
     }
 
-    // 🔹 Halaman create
+    //Halaman create
     public function create()
     {
         return view('products.create');
     }
 
-    // 🔹 Simpan produk baru
+    // untuk menyimpan produk baru
     public function store(Request $request)
     {
         $request->validate([
@@ -48,13 +55,13 @@ class ProductController extends Controller
             'stok' => 'required|integer',
         ]);
 
-        // Ambil produk lama dari session
+        //untuk ambil produk lama dari session
         $products = session('products', $this->defaultProducts);
 
-        // Buat ID baru
+        //untuk buat id baru 
         $newId = collect($products)->max('id') + 1;
 
-        // Tambah produk baru
+        //untuk tambah produk baru
         $products[] = [
             'id' => $newId,
             'nama_produk' => $request->nama_produk,
@@ -64,13 +71,13 @@ class ProductController extends Controller
             'kategori' => $request->kategori,
         ];
 
-        // Simpan ke session
+        //Simpan ke session
         session(['products' => $products]);
 
         return redirect()->route('products.index')->with('success', 'Produk berhasil ditambahkan!');
     }
 
-    // 🔹 Halaman edit produk
+    //Halaman edit produk
     public function edit($id)
     {
         $products = session('products', $this->defaultProducts);
@@ -83,7 +90,7 @@ class ProductController extends Controller
         return view('products.edit', compact('product'));
     }
 
-    // 🔹 Update produk
+    //Update produk
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -110,7 +117,7 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Produk berhasil diperbarui!');
     }
 
-    // 🔹 Hapus produk
+    //Hapus produk
     public function destroy($id)
     {
         $products = session('products', $this->defaultProducts);
