@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="brand">Campify</div>
-        <form action="{{ route('products') }}" method="GET">
+        <form action="{{ route('search-products') }}" method="GET">
             <input type="text" name="search" placeholder="Cari produk..." value="{{ $keyword }}">
             <button type="submit">Cari</button>
         </form>
