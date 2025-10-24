@@ -13,6 +13,7 @@ class penjualController extends Controller
             'name' => 'Arif Rahman',
             'email' => 'arif@example.com',
             'bio' => 'Dosen IT dan pengembang EduVista',
+            'nomor_telepon' => '081234567890',
             'photo' => 'avatar.jpeg'
         ];
 
