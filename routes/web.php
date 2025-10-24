@@ -37,6 +37,7 @@ Route::post('/stok', [StokController::class, 'store'])->name('stok.store');
 Route::get('/stok/edit/{id}', [StokController::class, 'edit'])->name('stok.edit');
 Route::post('/stok/update/{id}', [StokController::class, 'update'])->name('stok.update');
 Route::get('/stok/delete/{id}', [StokController::class, 'delete'])->name('stok.delete');
+
 Route::get('/search-products', [SearchProductController::class, 'index'])->name('search-products');
 
 Route::get('/stok/reset', function () {
