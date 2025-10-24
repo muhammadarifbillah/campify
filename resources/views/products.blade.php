@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Halaman Penjualan</title>
-    <!-- Panggil file CSS dari folder public/css -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
@@ -17,9 +16,8 @@
         </form>
     </div>
 
-    <!-- Konten utama -->
     <div class="container">
-        <h2>🛒 Daftar Produk</h2>
+        <h2>Daftar Produk</h2>
 
         @if(count($products) > 0)
             <table>

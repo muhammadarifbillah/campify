@@ -32,7 +32,7 @@ class AuthController extends Controller
             if ($user['username'] === $request->username && $user['password'] === $request->password) {
                 session(['username' => $user['username']]);
                 // arahkan ke halaman produk (search)
-                return redirect()->route('products');
+                return redirect()->route('dashboardPenjual');
             }
         }
 

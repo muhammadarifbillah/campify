@@ -7,6 +7,18 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Stokcontroller;
 use App\Http\Controllers\SearchProductController;
+use App\Http\Controllers\AuthController;
+
+// Halaman utama (landing page) diarahkan ke login
+Route::get('/', [AuthController::class, 'showLogin'])->name('login');
+
+// Halaman register
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+
+// Proses login dan register
+Route::post('/login', [AuthController::class, 'login'])->name('login.process');
+Route::post('/register', [AuthController::class, 'register'])->name('register.process');
+
 
 Route::get('/penjual/dashboard', [penjualController::class, 'dashboard'])->name('dashboardPenjual');
 
